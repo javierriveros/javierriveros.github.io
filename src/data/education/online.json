@@ -1,0 +1,19 @@
+{
+  "slug": "online",
+  "title": "Online courses",
+  "description": "Finished courses in online education platforms",
+  "items": [
+    {
+      "id": "online-01",
+      "name": "Professional JavaScript course",
+      "url": "https://codigofacilito.com/cursos/javascript-profesional",
+      "score": "10"
+    },
+    {
+      "id": "online-02",
+      "name": "Create a personal site with Gatsby",
+      "url": "https://codigofacilito.com/cursos/sitio-persional-gatsby",
+      "score": "9"
+    }
+  ]
+}
