@@ -1,9 +1,28 @@
 import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
-import EducationCard from "./education-card"
-import { Item, Node, Edge } from "../types"
+import styled from "styled-components"
+import { EducationCard } from "./education-card"
+import { Section, Container, Title } from "./styles"
+import { Node, Edge } from "../types"
 
-interface EducationProps {
+// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+// Styles
+// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+const EducationStyles = styled(Section)``
+
+const EducationGrid = styled.div`
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1rem;
+  align-items: start;
+`
+
+// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+// Types
+// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+type EducationProps = {
   allEducationJson: {
     edges: Edge[]
   }
@@ -31,23 +50,15 @@ export default function Education() {
     }
   `)
   return (
-    <div>
-      <h2>Know about my education</h2>
-      <nav>
-        {data.allEducationJson.edges.map(({ node }: { node: Node }) => (
-          <article key={node.slug}>
-            <header>
-              <p>{node.title}</p>
-              <div>
-                <p>{node.description}</p>
-                {node.items.map((item: Item) => {
-                  return <EducationCard item={item} key={item.id} />
-                })}
-              </div>
-            </header>
-          </article>
-        ))}
-      </nav>
-    </div>
+    <EducationStyles second>
+      <Container>
+        <Title>Know about my education</Title>
+        <EducationGrid>
+          {data.allEducationJson.edges.map(({ node }: { node: Node }) => (
+            <EducationCard node={node} key={node.slug} />
+          ))}
+        </EducationGrid>
+      </Container>
+    </EducationStyles>
   )
 }

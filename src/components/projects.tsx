@@ -1,7 +1,14 @@
 import React from "react"
-import { useStaticQuery, graphql } from "gatsby"
+import { graphql, useStaticQuery } from "gatsby"
+import styled from "styled-components"
+import { Container, Section, SectionProps, Title } from "./styles"
+import ProjectCard from "./project-card"
 
-interface Node {
+const ProjectsStyles = styled(Section)<SectionProps>`
+  //background-color: wheat;
+`
+
+export interface Node {
   node: {
     id: string
     name: string
@@ -23,6 +30,7 @@ export default function Projects() {
             name
             description
             stack
+            client
             goals
             date
           }
@@ -31,22 +39,13 @@ export default function Projects() {
     }
   `)
   return (
-    <section>
-      <h3>Some of the projects I&apos;ve worked on</h3>
-      {data.allProjectsJson.edges.map(({ node }: Node) => (
-        <article key={node.id}>
-          <h4>{node.name}</h4>
-          <span>{node.date}</span>
-          <p>{node.description}</p>
-          <span>{node.client}</span>
-          <p>{node.stack}</p>
-          <ul>
-            {node.goals.map((goal: string, index: number) => (
-              <li key={index}>{goal}</li>
-            ))}
-          </ul>
-        </article>
-      ))}
-    </section>
+    <ProjectsStyles>
+      <Container>
+        <Title>Some of the projects I&apos;ve worked on</Title>
+        {data.allProjectsJson.edges.map(({ node }: Node) => (
+          <ProjectCard node={node} key={node.id} />
+        ))}
+      </Container>
+    </ProjectsStyles>
   )
 }

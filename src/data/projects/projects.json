@@ -30,7 +30,11 @@
     "description": "Online courses platform for selling courses in video format.",
     "stack": "Ruby on Rails, Bootstrap",
     "client": "Musell.co",
-    "goals": ["TODO"],
+    "goals": [
+      "Developed virtual training site for managing and selling video courses.",
+      "Deployed the platform to a SaaS platform.",
+      "Supported platform operation for 2 months after deploy."
+    ],
     "date": "2020-01-23"
   },
   {

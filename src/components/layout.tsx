@@ -6,12 +6,42 @@
  */
 
 import React, { FunctionComponent, ReactNode } from "react"
-import { useStaticQuery, graphql } from "gatsby"
+import { graphql, useStaticQuery } from "gatsby"
+import {
+  createGlobalStyle,
+  ThemeProvider as StyledThemeProvider,
+} from "styled-components"
 
 import Header from "./header"
 import Footer from "./footer"
 
-interface LayoutProps {
+// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+// Styles
+// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+const GlobalStyle = createGlobalStyle`
+  * {
+    box-sizing: border-box;
+  }
+
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    margin: 0;
+    padding: 0;
+    background-color: #333646;
+    color: #fff;
+  }
+
+  main {
+    margin: 0 auto;
+  }
+`
+
+// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+// Types
+// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+type LayoutProps = {
   children: ReactNode
 }
 
@@ -27,13 +57,16 @@ const Layout: FunctionComponent<LayoutProps> = ({ children }: LayoutProps) => {
   `)
 
   return (
-    <>
-      <Header siteTitle={data.site.siteMetadata.title} />
+    <StyledThemeProvider theme={{ theme: "light" }}>
+      <GlobalStyle />
+      <main>
+        <Header siteTitle={data.site.siteMetadata.title} />
 
-      <main>{children}</main>
+        {children}
 
-      <Footer />
-    </>
+        <Footer />
+      </main>
+    </StyledThemeProvider>
   )
 }
 

@@ -7,10 +7,16 @@
       "id": "online-01",
       "name": "Professional JavaScript course",
       "url": "https://codigofacilito.com/cursos/javascript-profesional",
-      "score": "10"
+      "score": "9"
     },
     {
       "id": "online-02",
+      "name": "Professional Java course",
+      "url": "https://codigofacilito.com/cursos/java-profesional",
+      "score": "9"
+    },
+    {
+      "id": "online-03",
       "name": "Create a personal site with Gatsby",
       "url": "https://codigofacilito.com/cursos/sitio-persional-gatsby",
       "score": "9"

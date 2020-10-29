@@ -1,19 +1,17 @@
 {
   "slug": "others",
-  "description": "Workshops, diplomas and conferences in which I have participated",
-  "title": "Other academic achievements",
+  "description": "Workshops, diplomas and conferences in which I've participated",
+  "title": "Other",
   "items": [
     {
       "id": "other-01",
       "name": "CTA Unillanos",
-      "degree": "Open Technologies Conference at the University of Los Llanos.",
-      "score": "5"
+      "degree": "Open Technologies Conference at the University of Los Llanos."
     },
     {
       "id": "other-02",
       "name": "Oracle Code Bogotá",
-      "degree": "Oracle conference to learn about modern technologies.",
-      "score": "5"
+      "degree": "Oracle conference to learn about modern technologies."
     }
   ]
 }
