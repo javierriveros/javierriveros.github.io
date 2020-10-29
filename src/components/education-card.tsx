@@ -1,32 +1,32 @@
-import React from "react"
-import styled from "styled-components"
-import { Item, Node } from "../types"
+import React from "react";
+import styled from "styled-components";
+import { Item, Node } from "../types";
 
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 // Styles
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-const CardStyles = styled.article``
+const CardStyles = styled.article``;
 
 const NodeTitle = styled.p`
   font-size: 1.3rem;
   margin-bottom: 0;
   font-weight: 600;
-`
+`;
 
-const NodeDescription = styled.p``
+const NodeDescription = styled.p``;
 
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 // Types
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 type EducationCardProps = {
-  node: Node
-}
+  node: Node;
+};
 
 type EducationItemProps = {
-  item: Item
-}
+  item: Item;
+};
 
 export const EducationCard: React.FunctionComponent<EducationCardProps> = ({
   node,
@@ -43,20 +43,20 @@ export const EducationCard: React.FunctionComponent<EducationCardProps> = ({
         ))}
       </section>
     </CardStyles>
-  )
-}
+  );
+};
 
 const EducationItemStyles = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
   padding: 1rem 0;
-`
+`;
 
 const ItemTitle = styled.h4`
   display: inline-block;
   margin: 0 0 0.5rem;
-`
+`;
 
 export const Check = styled.div`
   display: flex;
@@ -69,18 +69,18 @@ export const Check = styled.div`
     width: 20px;
     height: 20px;
   }
-`
+`;
 
 const Content = styled.div`
   width: 100%;
   display: flex;
   flex-direction: column;
-`
+`;
 
 const StyledLink = styled.a`
   color: #ffaf28;
   text-decoration: none;
-`
+`;
 
 const EducationItem: React.FunctionComponent<EducationItemProps> = ({
   item,
@@ -111,5 +111,5 @@ const EducationItem: React.FunctionComponent<EducationItemProps> = ({
         )}
       </Content>
     </EducationItemStyles>
-  )
-}
+  );
+};

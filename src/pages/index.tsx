@@ -1,12 +1,12 @@
-import * as React from "react"
-import { PageProps } from "gatsby"
+import * as React from "react";
+import { PageProps } from "gatsby";
 
-import Layout from "../components/layout"
-import SEO from "../components/seo"
-import Hero from "../components/hero"
-import Experience from "../components/experience"
-import Projects from "../components/projects"
-import Education from "../components/education"
+import SEO from "../components/seo";
+import Hero from "../components/hero";
+import Layout from "../components/layout";
+import Projects from "../components/projects";
+import Education from "../components/education";
+import Experience from "../components/experience";
 
 const IndexPage: React.FunctionComponent<PageProps> = (props: PageProps) => (
   <Layout>
@@ -24,6 +24,6 @@ const IndexPage: React.FunctionComponent<PageProps> = (props: PageProps) => (
     <Projects />
     <Education />
   </Layout>
-)
+);
 
-export default IndexPage
+export default IndexPage;

@@ -1,7 +1,8 @@
-import React from "react"
-import styled from "styled-components"
-import { Node } from "./projects"
-import { Check } from "./education-card"
+import React from "react";
+import styled from "styled-components";
+
+import { Node } from "./projects";
+import { Check } from "./education-card";
 
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 // Styles
@@ -12,31 +13,31 @@ const ProjectStyles = styled.article`
   padding: 1.5rem;
   border-radius: 0.25em;
   margin-top: 1rem;
-`
+`;
 
 const ProjectTitle = styled.h4`
   font-size: 1.25rem;
   margin: 0;
-`
+`;
 
 const ProjectDate = styled.span`
   color: #c8c8cc;
   font-size: 0.85rem;
-`
+`;
 
 const ProjectDescription = styled.p`
   color: #ddddde;
-`
+`;
 
 const ProjectClient = styled.span`
   color: #ffc25b;
   font-size: 0.85rem;
-`
+`;
 
 const ProjectStack = styled.span`
   color: #c8c8cc;
   font-size: 0.85rem;
-`
+`;
 
 const ProjectGoals = styled.ul`
   list-style: none;
@@ -47,12 +48,12 @@ const ProjectGoals = styled.ul`
     align-items: start;
     margin: 0.25rem 0 0 0;
   }
-`
+`;
 
 const Dot = styled.span`
   color: #c8c8cc;
   margin: 0 0.5rem;
-`
+`;
 
 const ProjectCard = ({ node }: Node) => {
   return (
@@ -80,7 +81,7 @@ const ProjectCard = ({ node }: Node) => {
         ))}
       </ProjectGoals>
     </ProjectStyles>
-  )
-}
+  );
+};
 
-export default ProjectCard
+export default ProjectCard;

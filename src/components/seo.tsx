@@ -5,26 +5,26 @@
  * See: https://www.gatsbyjs.org/docs/use-static-query/
  */
 
-import React, { FunctionComponent } from "react"
-import { Helmet } from "react-helmet"
-import { useStaticQuery, graphql } from "gatsby"
+import React, { FunctionComponent } from "react";
+import { Helmet } from "react-helmet";
+import { graphql, useStaticQuery } from "gatsby";
 
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 // Types
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 type Meta = {
-  content: string
-  name?: string
-  property?: string
-}
+  content: string;
+  name?: string;
+  property?: string;
+};
 
 type Props = {
-  title: string
-  description?: string
-  meta?: Meta[]
-  lang?: string
-}
+  title: string;
+  description?: string;
+  meta?: Meta[];
+  lang?: string;
+};
 
 const SEO: FunctionComponent<Props> = ({
   description = "",
@@ -44,9 +44,9 @@ const SEO: FunctionComponent<Props> = ({
         }
       }
     `
-  )
+  );
 
-  const metaDescription = description || site.siteMetadata.description
+  const metaDescription = description || site.siteMetadata.description;
   const customMeta: Meta[] = [
     {
       name: `description`,
@@ -80,7 +80,7 @@ const SEO: FunctionComponent<Props> = ({
       name: `twitter:description`,
       content: metaDescription,
     },
-  ]
+  ];
 
   return (
     <Helmet
@@ -91,7 +91,7 @@ const SEO: FunctionComponent<Props> = ({
       titleTemplate={`%s | ${site.siteMetadata.title}`}
       meta={customMeta.concat(meta)}
     />
-  )
-}
+  );
+};
 
-export default SEO
+export default SEO;

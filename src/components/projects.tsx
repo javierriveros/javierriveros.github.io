@@ -1,23 +1,23 @@
-import React from "react"
-import { graphql, useStaticQuery } from "gatsby"
-import styled from "styled-components"
-import { Container, Section, SectionProps, Title } from "./styles"
-import ProjectCard from "./project-card"
+import React from "react";
+import { graphql, useStaticQuery } from "gatsby";
+import styled from "styled-components";
+import { Container, Section, SectionProps, Title } from "./styles";
+import ProjectCard from "./project-card";
 
 const ProjectsStyles = styled(Section)<SectionProps>`
   //background-color: wheat;
-`
+`;
 
 export interface Node {
   node: {
-    id: string
-    name: string
-    description: string
-    client: string
-    stack: string
-    date: string
-    goals: string[]
-  }
+    id: string;
+    name: string;
+    description: string;
+    client: string;
+    stack: string;
+    date: string;
+    goals: string[];
+  };
 }
 
 export default function Projects() {
@@ -37,7 +37,7 @@ export default function Projects() {
         }
       }
     }
-  `)
+  `);
   return (
     <ProjectsStyles>
       <Container>
@@ -47,5 +47,5 @@ export default function Projects() {
         ))}
       </Container>
     </ProjectsStyles>
-  )
+  );
 }

@@ -1,9 +1,9 @@
-import * as React from "react"
+import * as React from "react";
+import { PageProps } from "gatsby";
 
-import Layout from "../components/layout"
-import SEO from "../components/seo"
-import Experience from "../components/experience"
-import { PageProps } from "gatsby"
+import SEO from "../components/seo";
+import Layout from "../components/layout";
+import Experience from "../components/experience";
 
 const ExperiencePage: React.FunctionComponent<PageProps> = (
   props: PageProps
@@ -20,6 +20,6 @@ const ExperiencePage: React.FunctionComponent<PageProps> = (
     />
     <Experience />
   </Layout>
-)
+);
 
-export default ExperiencePage
+export default ExperiencePage;
