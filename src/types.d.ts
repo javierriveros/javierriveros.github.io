@@ -1,4 +1,4 @@
-export interface Item {
+export type Item = {
   id: string
   name: string
   score: string
@@ -6,13 +6,13 @@ export interface Item {
   degree?: string
 }
 
-export interface Node {
+export type Node = {
   slug: string
   title: string
   description: string
   items: Item[]
 }
 
-export interface Edge {
+export type Edge = {
   node: Node
 }
