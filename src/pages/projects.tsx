@@ -1,9 +1,9 @@
-import * as React from "react"
+import * as React from "react";
+import { PageProps } from "gatsby";
 
-import Layout from "../components/layout"
-import SEO from "../components/seo"
-import Projects from "../components/projects"
-import { PageProps } from "gatsby"
+import SEO from "../components/seo";
+import Layout from "../components/layout";
+import Projects from "../components/projects";
 
 const ProjectsPage: React.FunctionComponent<PageProps> = (props: PageProps) => (
   <Layout>
@@ -18,6 +18,6 @@ const ProjectsPage: React.FunctionComponent<PageProps> = (props: PageProps) => (
     />
     <Projects />
   </Layout>
-)
+);
 
-export default ProjectsPage
+export default ProjectsPage;

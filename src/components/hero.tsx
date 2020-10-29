@@ -1,7 +1,8 @@
-import * as React from "react"
-import styled from "styled-components"
-import ProfileImage from "./profile-image"
-import { Container } from "./styles"
+import * as React from "react";
+import styled from "styled-components";
+
+import ProfileImage from "./profile-image";
+import { Container } from "./styles";
 
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 // Styles
@@ -17,7 +18,7 @@ const HeroStyles = styled.section`
   @media screen and (min-width: 62em) {
     flex-direction: row;
   }
-`
+`;
 
 const LeftContent = styled.article`
   padding-right: 1rem;
@@ -27,7 +28,7 @@ const LeftContent = styled.article`
   @media screen and (min-width: 62em) {
     width: 65%;
   }
-`
+`;
 
 const RightContent = styled.aside`
   padding: 0;
@@ -36,7 +37,7 @@ const RightContent = styled.aside`
   @media screen and (max-width: 62em) {
     display: none;
   }
-`
+`;
 
 const Title = styled.h1`
   color: #fff;
@@ -46,7 +47,7 @@ const Title = styled.h1`
   @media screen and (min-width: 62em) {
     font-size: 2.5rem;
   }
-`
+`;
 
 const Subtitle = styled.h2`
   color: #fff;
@@ -55,7 +56,7 @@ const Subtitle = styled.h2`
   @media screen and (min-width: 62em) {
     font-size: 2rem;
   }
-`
+`;
 
 const Description = styled.p`
   color: #fff;
@@ -65,7 +66,7 @@ const Description = styled.p`
   @media screen and (min-width: 62em) {
     font-size: 1.25rem;
   }
-`
+`;
 
 export default function Hero() {
   return (
@@ -87,5 +88,5 @@ export default function Hero() {
         </RightContent>
       </HeroStyles>
     </Container>
-  )
+  );
 }

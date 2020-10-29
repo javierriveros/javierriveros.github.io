@@ -1,6 +1,6 @@
-import * as React from "react"
-import { useStaticQuery, graphql } from "gatsby"
-import Img from "gatsby-image"
+import * as React from "react";
+import { graphql, useStaticQuery } from "gatsby";
+import Img from "gatsby-image";
 
 const ProfileImage: React.FunctionComponent<{}> = () => {
   const data = useStaticQuery(graphql`
@@ -13,14 +13,14 @@ const ProfileImage: React.FunctionComponent<{}> = () => {
         }
       }
     }
-  `)
+  `);
 
   return (
     <Img
       fluid={data.placeholderImage.childImageSharp.fluid}
       style={{ clipPath: "url(#svg-blob)", minWidth: "300px" }}
     />
-  )
-}
+  );
+};
 
-export default ProfileImage
+export default ProfileImage;

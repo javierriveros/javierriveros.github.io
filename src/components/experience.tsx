@@ -1,8 +1,9 @@
-import React from "react"
-import { useStaticQuery, graphql, Link } from "gatsby"
-import styled from "styled-components"
-import { Title, Container, Section, SectionProps } from "./styles"
-import ExperienceCard from "./experience-card"
+import React from "react";
+import { graphql, Link, useStaticQuery } from "gatsby";
+import styled from "styled-components";
+
+import ExperienceCard from "./experience-card";
+import { Container, Section, SectionProps, Title } from "./styles";
 
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 // Styles
@@ -10,7 +11,7 @@ import ExperienceCard from "./experience-card"
 
 const ExperienceStyles = styled(Section)<SectionProps>`
   background-color: #262734;
-`
+`;
 
 const Button = styled(Link)`
   text-decoration: none;
@@ -34,13 +35,13 @@ const Button = styled(Link)`
   &:hover::after {
     bottom: -2px;
   }
-`
+`;
 
 const Centered = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-`
+`;
 
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 // Types
@@ -48,14 +49,14 @@ const Centered = styled.div`
 
 export type Node = {
   node: {
-    id: string
-    role: string
-    responsibilities: string
-    company: string
-    from: string
-    to: string
-  }
-}
+    id: string;
+    role: string;
+    responsibilities: string;
+    company: string;
+    from: string;
+    to: string;
+  };
+};
 
 export default function Experience() {
   const data = useStaticQuery(graphql`
@@ -73,7 +74,7 @@ export default function Experience() {
         }
       }
     }
-  `)
+  `);
   return (
     <ExperienceStyles>
       <Container>
@@ -86,5 +87,5 @@ export default function Experience() {
         </Centered>
       </Container>
     </ExperienceStyles>
-  )
+  );
 }

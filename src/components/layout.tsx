@@ -5,15 +5,15 @@
  * See: https://www.gatsbyjs.org/docs/use-static-query/
  */
 
-import React, { FunctionComponent, ReactNode } from "react"
-import { graphql, useStaticQuery } from "gatsby"
+import React, { FunctionComponent, ReactNode } from "react";
+import { graphql, useStaticQuery } from "gatsby";
 import {
   createGlobalStyle,
   ThemeProvider as StyledThemeProvider,
-} from "styled-components"
+} from "styled-components";
 
-import Header from "./header"
-import Footer from "./footer"
+import Header from "./header";
+import Footer from "./footer";
 
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 // Styles
@@ -35,15 +35,15 @@ const GlobalStyle = createGlobalStyle`
   main {
     margin: 0 auto;
   }
-`
+`;
 
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 // Types
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 type LayoutProps = {
-  children: ReactNode
-}
+  children: ReactNode;
+};
 
 const Layout: FunctionComponent<LayoutProps> = ({ children }: LayoutProps) => {
   const data = useStaticQuery(graphql`
@@ -54,7 +54,7 @@ const Layout: FunctionComponent<LayoutProps> = ({ children }: LayoutProps) => {
         }
       }
     }
-  `)
+  `);
 
   return (
     <StyledThemeProvider theme={{ theme: "light" }}>
@@ -67,7 +67,7 @@ const Layout: FunctionComponent<LayoutProps> = ({ children }: LayoutProps) => {
         <Footer />
       </main>
     </StyledThemeProvider>
-  )
-}
+  );
+};
 
-export default Layout
+export default Layout;

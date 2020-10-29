@@ -1,5 +1,5 @@
-import React from "react"
-import styled from "styled-components"
+import React from "react";
+import styled from "styled-components";
 
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 // Styles
@@ -41,7 +41,7 @@ const FooterStyles = styled.footer`
       }
     }
   }
-`
+`;
 const SocialLink = styled.a`
   text-decoration: none;
   margin: 0 1rem;
@@ -64,7 +64,7 @@ const SocialLink = styled.a`
   &:hover::after {
     bottom: 0;
   }
-`
+`;
 
 const Footer: React.FunctionComponent<{}> = () => {
   return (
@@ -109,7 +109,7 @@ const Footer: React.FunctionComponent<{}> = () => {
 
       <p>Built with Gatsby and ❤️. By Javier Riveros.</p>
     </FooterStyles>
-  )
-}
+  );
+};
 
-export default Footer
+export default Footer;

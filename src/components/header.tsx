@@ -1,7 +1,8 @@
-import { Link } from "gatsby"
-import * as React from "react"
-import styled from "styled-components"
-import { Container } from "./styles"
+import { Link } from "gatsby";
+import * as React from "react";
+import styled from "styled-components";
+
+import { Container } from "./styles";
 
 const HeaderStyles = styled.header`
   display: flex;
@@ -51,15 +52,15 @@ const HeaderStyles = styled.header`
       }
     }
   }
-`
+`;
 
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 // Types
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 type HeaderProps = {
-  siteTitle: string
-}
+  siteTitle: string;
+};
 
 const Header: React.FunctionComponent<HeaderProps> = ({
   siteTitle,
@@ -80,6 +81,6 @@ const Header: React.FunctionComponent<HeaderProps> = ({
       </nav>
     </HeaderStyles>
   </Container>
-)
+);
 
-export default Header
+export default Header;
