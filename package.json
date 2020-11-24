@@ -55,7 +55,7 @@
     "type-check": "tsc",
     "lint": "eslint --ignore-path .gitignore . --ext ts --ext tsx --ext js --ext jsx",
     "lint:fix": "yarn lint --fix",
-    "deploy": "gatsby build && gh-pages -d public -b master"
+    "deploy": "gatsby build && gh-pages -d public -b gh-pages"
   },
   "repository": {
     "type": "git",
