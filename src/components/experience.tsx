@@ -66,7 +66,7 @@ export default function Experience() {
           node {
             id
             role
-            responsabilities
+            responsibilities
             company
             from
             to
