@@ -1,16 +1,16 @@
 {
-  "slug": "presencial",
+  "slug": "academic",
   "title": "Academic Training",
   "description": "Academic training, degrees of study and institutions I attended",
   "items": [
     {
-      "id": "presencial-01",
+      "id": "academic-01",
       "name": "Los Llanos University",
       "degree": "Systems engineering",
       "score": "3.6"
     },
     {
-      "id": "presencial-02",
+      "id": "academic-02",
       "name": "SENA",
       "degree": "Agricultural Production Technician",
       "score": "4.5"

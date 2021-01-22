@@ -28,7 +28,7 @@ const Role = styled.h4`
   font-size: 1.25rem;
 `;
 
-const Responsabilities = styled.p``;
+const Responsibilities = styled.p``;
 
 const Company = styled.span`
   color: #ffc25b;
@@ -42,7 +42,7 @@ const ExperienceCard = ({ node }: Node) => {
       </Date>
       <Content>
         <Role>{node.role}</Role>
-        <Responsabilities>{node.responsibilities}</Responsabilities>
+        <Responsibilities>{node.responsibilities}</Responsibilities>
         <Company>{node.company}</Company>
       </Content>
     </CardStyles>

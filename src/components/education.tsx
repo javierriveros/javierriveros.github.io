@@ -31,7 +31,7 @@ type EducationProps = {
 export default function Education() {
   const data = useStaticQuery<EducationProps>(graphql`
     {
-      allEducationJson {
+      allEducationJson(sort: { fields: [slug], order: [ASC] }) {
         edges {
           node {
             slug
