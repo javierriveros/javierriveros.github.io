@@ -76,11 +76,11 @@ export default function Hero() {
           <Title>Hi! I{"'"}m Javier Riveros.</Title>
           <Subtitle>I{"'"}m a web developer from Colombia 🇨🇴</Subtitle>
           <Description>
-            I{"'"}m currently working as an intern at Enciso Systems company. I
-            {"'"}ve been building modern web applications using Ruby on Rails
-            and React for about +2 years. In my spare time, I like to learn new
-            things and read books. I am currently finishing my systems
-            engineering studies at Los Llanos university.
+            I{"'"}m currently working as a freelancer for some clients. I{"'"}ve
+            been building modern web applications using Ruby on Rails and React
+            for about +2 years. In my spare time, I like to learn new things and
+            read books. I am currently finishing my systems engineering studies
+            at Los Llanos university.
           </Description>
         </LeftContent>
         <RightContent>
