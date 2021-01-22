@@ -1,5 +1,5 @@
 import React from "react";
-import { graphql, Link, useStaticQuery } from "gatsby";
+import { graphql, useStaticQuery } from "gatsby";
 import styled from "styled-components";
 
 import ExperienceCard from "./experience-card";
@@ -11,36 +11,6 @@ import { Container, Section, SectionProps, Title } from "./styles";
 
 const ExperienceStyles = styled(Section)<SectionProps>`
   background-color: #262734;
-`;
-
-const Button = styled(Link)`
-  text-decoration: none;
-  margin: 1rem 0;
-  color: #ffc25b;
-  position: relative;
-
-  &::after {
-    content: "";
-    position: absolute;
-    left: 0;
-    right: 0;
-    bottom: -5px;
-    border-bottom: 1px;
-    height: 1.5px;
-    width: 100%;
-    background-color: currentColor;
-    transition: bottom 0.3s;
-  }
-
-  &:hover::after {
-    bottom: -2px;
-  }
-`;
-
-const Centered = styled.div`
-  display: flex;
-  justify-content: center;
-  align-items: center;
 `;
 
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -82,9 +52,6 @@ export default function Experience() {
         {data.allExperienceJson.edges.map(({ node }: Node) => (
           <ExperienceCard node={node} key={node.id} />
         ))}
-        <Centered>
-          <Button to="/experience">View more</Button>
-        </Centered>
       </Container>
     </ExperienceStyles>
   );
