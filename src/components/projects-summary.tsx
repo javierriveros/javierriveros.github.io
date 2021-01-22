@@ -3,7 +3,14 @@ import styled from "styled-components";
 import { graphql, useStaticQuery } from "gatsby";
 
 import ProjectCard from "./project-card";
-import { Container, Section, SectionProps, Title } from "./styles";
+import {
+  Button,
+  Centered,
+  Container,
+  Section,
+  SectionProps,
+  Title,
+} from "./styles";
 
 const ProjectsStyles = styled(Section)<SectionProps>`
   //background-color: wheat;
@@ -21,10 +28,10 @@ export interface Node {
   };
 }
 
-export default function Projects() {
+export default function ProjectsSummary() {
   const data = useStaticQuery(graphql`
     {
-      allProjectsJson(sort: { fields: date, order: DESC }) {
+      allProjectsJson(sort: { fields: date, order: DESC }, limit: 2) {
         edges {
           node {
             id
@@ -46,6 +53,10 @@ export default function Projects() {
         {data.allProjectsJson.edges.map(({ node }: Node) => (
           <ProjectCard node={node} key={node.id} />
         ))}
+
+        <Centered>
+          <Button to="/projects">View more</Button>
+        </Centered>
       </Container>
     </ProjectsStyles>
   );
