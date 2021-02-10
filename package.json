@@ -2,7 +2,7 @@
   "name": "gatsby-starter-default",
   "private": true,
   "description": "Portfolio site",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "author": "Javier Riveros <walter.riveros.c@gmail.com>",
   "dependencies": {
     "@types/react": "^16.9.35",
