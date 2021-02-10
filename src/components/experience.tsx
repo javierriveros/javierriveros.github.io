@@ -31,7 +31,7 @@ export type Node = {
 export default function Experience() {
   const data = useStaticQuery(graphql`
     {
-      allExperienceJson {
+      allExperienceJson(sort: { fields: [id], order: DESC }) {
         edges {
           node {
             id
