@@ -32,6 +32,8 @@ const Responsibilities = styled.p``;
 
 const Company = styled.span`
   color: #ffc25b;
+  margin-top: 1rem;
+  display: block;
 `;
 
 const ExperienceCard = ({ node }: Node) => {
@@ -42,7 +44,9 @@ const ExperienceCard = ({ node }: Node) => {
       </Date>
       <Content>
         <Role>{node.role}</Role>
-        <Responsibilities>{node.responsibilities}</Responsibilities>
+        {node.responsibilities && (
+          <Responsibilities>{node.responsibilities}</Responsibilities>
+        )}
         <Company>{node.company}</Company>
       </Content>
     </CardStyles>

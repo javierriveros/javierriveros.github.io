@@ -1,17 +1,19 @@
-import { useEffect } from "react";
+import * as React from "react";
 
-import useMedia from "./useMedia";
+import { useMedia } from "./useMedia";
 import { useLocalStorage } from "./useLocalStorage";
 
 function usePrefersDarkMode() {
-  return useMedia < boolean > (["(prefers-color-scheme: dark)"], [true], false);
+  return useMedia<boolean>(["(prefers-color-scheme: dark)"], [true], false);
 }
 
 export function useDarkMode() {
   // Use our useLocalStorage hook to persist state through a page refresh.
   // Read the recipe for this hook to learn more: usehooks.com/useLocalStorage
-  const [enabledState, setEnabledState] =
-    useLocalStorage < boolean > ("dark-mode-enabled", false);
+  const [enabledState, setEnabledState] = useLocalStorage(
+    "dark-mode-enabled",
+    false
+  );
 
   // See if user has set a browser or OS preference for dark mode.
   // The usePrefersDarkMode hook composes a useMedia hook (see code below).
@@ -22,7 +24,7 @@ export function useDarkMode() {
   const enabled = enabledState ?? prefersDarkMode;
 
   // Fire off effect that add/removes dark mode class
-  useEffect(
+  React.useEffect(
     () => {
       const className = "dark-mode";
       const element = window.document.body;
