@@ -1,9 +1,9 @@
-import { useState } from "react";
+import * as React from "react";
 
 export const useLocalStorage = (key: string, initialValue: any) => {
   // State to store our value
   // Pass initial state function to useState so logic is only executed once
-  const [storedValue, setStoredValue] = useState(() => {
+  const [storedValue, setStoredValue] = React.useState(() => {
     try {
       // Get from local storage by key
       const item = window.localStorage.getItem(key);
