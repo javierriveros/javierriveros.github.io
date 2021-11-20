@@ -92,7 +92,7 @@ const Footer: React.FunctionComponent<{}> = () => {
           Gitlab
         </SocialLink>
         <SocialLink
-          href="https://bio.torre.co/en/javierriveros"
+          href="https://torre.co/javierriveros"
           target="_blank"
           rel="noopener noreferrer"
         >

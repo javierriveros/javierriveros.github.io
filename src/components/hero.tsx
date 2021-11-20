@@ -76,11 +76,10 @@ export default function Hero() {
           <Title>Hi! I{"'"}m Javier Riveros.</Title>
           <Subtitle>I{"'"}m a web developer from Colombia 🇨🇴</Subtitle>
           <Description>
-            I{"'"}m currently working as a freelancer for some clients. I{"'"}ve
-            been building modern web applications using Ruby on Rails and React
-            for about +2 years. In my spare time, I like to learn new things and
-            read books. I am currently finishing my systems engineering studies
-            at Los Llanos university.
+            I{"'"}m currently working as a Software Developer at Torre Labs Inc, where our goal is to make work fulfilling for everyone on Earth.
+            <br />
+            <br />
+            I{"'"}m a passionate about technology, especially in the field of web development. I{"'"}m always looking for new challenges to learn and grow.
           </Description>
         </LeftContent>
         <RightContent>

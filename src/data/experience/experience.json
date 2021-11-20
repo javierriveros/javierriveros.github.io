@@ -1,34 +1,38 @@
 [
   {
-    "id": "experience-01",
+    "uid": "experience-01",
     "role": "Full Stack Developer",
     "responsibilities": "Develop virtual training site for managing and selling video courses.",
     "company": "Musell.co",
     "from": "Jan 2020",
-    "to": "May 2020"
+    "to": "May 2020",
+    "url": "https://musell.co"
   },
   {
-    "id": "experience-02",
+    "uid": "experience-02",
     "role": "Software Development Intern",
     "responsibilities": "Provide support to the process of migrating Python 2 to Python 3 and Django 1 to Django 2 of Djangoplicity, which supports the operation of the European Southern Observatory.",
     "company": "Enciso Systems",
     "from": "May 2020",
-    "to": "Nov 2020"
+    "to": "Nov 2020",
+    "url": "https://encisosystems.com"
   },
   {
-    "id": "experience-03",
+    "uid": "experience-03",
     "role": "Software Engineer Intern",
     "responsibilities": null,
     "company": "Torre.co",
     "from": "Feb 2021",
-    "to": "Jun 2021"
+    "to": "Jun 2021",
+    "url": "https://torre.co"
   },
   {
-    "id": "experience-04",
+    "uid": "experience-04",
     "role": "Software Engineer",
     "responsibilities": null,
     "company": "Torre.co",
     "from": "Jul 2021",
-    "to": "Current"
+    "to": "Current",
+    "url": "https://torre.co"
   }
 ]

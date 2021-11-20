@@ -25,21 +25,23 @@ export type Node = {
     company: string;
     from: string;
     to: string;
+    url: string;
   };
 };
 
 export default function Experience() {
   const data = useStaticQuery(graphql`
     {
-      allExperienceJson(sort: { fields: [id], order: DESC }) {
+      allExperienceJson(sort: { fields: [uid], order: DESC }) {
         edges {
           node {
-            id
+            uid
             role
             responsibilities
             company
             from
             to
+            url
           }
         }
       }

@@ -30,10 +30,15 @@ const Role = styled.h4`
 
 const Responsibilities = styled.p``;
 
-const Company = styled.span`
+const Company = styled.a`
   color: #ffc25b;
   margin-top: 1rem;
-  display: block;
+  display: inline-block;
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+  }
 `;
 
 const ExperienceCard = ({ node }: Node) => {
@@ -47,7 +52,7 @@ const ExperienceCard = ({ node }: Node) => {
         {node.responsibilities && (
           <Responsibilities>{node.responsibilities}</Responsibilities>
         )}
-        <Company>{node.company}</Company>
+        <Company href={node.url}>{node.company}</Company>
       </Content>
     </CardStyles>
   );
