@@ -51,7 +51,6 @@ const SEO: FunctionComponent<Props> = ({
 
   const metaDescription = description || site.siteMetadata.description;
   const defaultImage = image || `${site.siteMetadata.siteUrl}/logo.png`;
-  const defaultTitle = `${title} | ${site.siteMetadata.title}`;
 
   const customMeta: Meta[] = [
     {
@@ -60,7 +59,7 @@ const SEO: FunctionComponent<Props> = ({
     },
     {
       property: "og:title",
-      content: defaultTitle,
+      content: title,
     },
     {
       property: "og:description",
@@ -88,7 +87,7 @@ const SEO: FunctionComponent<Props> = ({
     },
     {
       name: "twitter:title",
-      content: defaultTitle,
+      content: title,
     },
     {
       name: "twitter:description",
@@ -114,7 +113,6 @@ const SEO: FunctionComponent<Props> = ({
         lang,
       }}
       title={title}
-      titleTemplate={`%s | ${site.siteMetadata.title}`}
       meta={customMeta.concat(meta)}
     />
   );
