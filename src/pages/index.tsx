@@ -11,11 +11,12 @@ export default function IndexPage() {
   return (
     <Layout>
       <SEO
-        title="Home"
+        title="Javier Riveros | Software Engineer"
+        description="Software Engineer with 4+ years of experience building scalable systems and leading technical initiatives. Specialized in full-stack development, AI integration, and system optimization."
         meta={[
           {
             name: "keywords",
-            content: "portfolio, gatsby, react, javascript",
+            content: "software engineer, full stack developer, scala, python, vue.js, react, typescript, javascript, django, ruby on rails, play framework, aws, mysql, postgresql, redis, rabbitmq, llm, langchain, ai, machine learning, nlp, web development, backend development, frontend development, colombia, product engineer, technical lead, mentor, software architecture, system design, performance optimization, test driven development, continuous integration, devops",
           },
         ]}
       />

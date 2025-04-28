@@ -24,13 +24,15 @@ type Props = {
   description?: string;
   meta?: Meta[];
   lang?: string;
+  image?: string;
 };
 
 const SEO: FunctionComponent<Props> = ({
   description = "",
-  lang = "es",
+  lang = "en",
   meta = [],
   title,
+  image,
 }: Props) => {
   const { site } = useStaticQuery(
     graphql`
@@ -40,6 +42,7 @@ const SEO: FunctionComponent<Props> = ({
             title
             description
             author
+            siteUrl
           }
         }
       }
@@ -47,42 +50,61 @@ const SEO: FunctionComponent<Props> = ({
   );
 
   const metaDescription = description || site.siteMetadata.description;
+  const defaultImage = image || `${site.siteMetadata.siteUrl}/logo.png`;
+  const defaultTitle = `${title} | ${site.siteMetadata.title}`;
+
   const customMeta: Meta[] = [
     {
-      name: `description`,
+      name: "description",
       content: metaDescription,
     },
     {
-      property: `og:title`,
-      content: title,
+      property: "og:title",
+      content: defaultTitle,
     },
     {
-      property: `og:description`,
+      property: "og:description",
       content: metaDescription,
     },
     {
-      property: `og:type`,
-      content: `website`,
+      property: "og:type",
+      content: "website",
     },
     {
-      name: `twitter:card`,
-      content: `summary`,
+      property: "og:image",
+      content: defaultImage,
     },
     {
-      name: `twitter:creator`,
+      property: "og:url",
+      content: site.siteMetadata.siteUrl,
+    },
+    {
+      name: "twitter:card",
+      content: "summary_large_image",
+    },
+    {
+      name: "twitter:creator",
       content: site.siteMetadata.author,
     },
     {
-      name: `twitter:title`,
-      content: title,
+      name: "twitter:title",
+      content: defaultTitle,
     },
     {
-      name: `twitter:description`,
+      name: "twitter:description",
       content: metaDescription,
     },
     {
-      name: `theme-color`,
-      content: `#0f172a`,
+      name: "twitter:image",
+      content: defaultImage,
+    },
+    {
+      name: "theme-color",
+      content: "#0f172a",
+    },
+    {
+      name: "viewport",
+      content: "width=device-width, initial-scale=1",
     },
   ];
 
