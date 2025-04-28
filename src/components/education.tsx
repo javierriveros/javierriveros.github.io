@@ -41,8 +41,9 @@ export default function Education() {
               id
               degree
               name
-              score
               url
+              provider
+              year
             }
           }
         }
@@ -52,7 +53,7 @@ export default function Education() {
   return (
     <EducationStyles second>
       <Container>
-        <Title>Know about my education</Title>
+        <Title>About my education</Title>
         <EducationGrid>
           {data.allEducationJson.edges.map(({ node }: { node: Node }) => (
             <EducationCard node={node} key={node.slug} />

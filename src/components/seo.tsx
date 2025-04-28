@@ -80,6 +80,10 @@ const SEO: FunctionComponent<Props> = ({
       name: `twitter:description`,
       content: metaDescription,
     },
+    {
+      name: `theme-color`,
+      content: `#0f172a`,
+    },
   ];
 
   return (

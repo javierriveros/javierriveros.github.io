@@ -16,20 +16,34 @@ export const Container = styled.section`
 `;
 
 export const Title = styled.h3`
-  font-size: 2rem;
-  /* font-family: "Gilroy"; */
-  margin: 0.5rem 0;
+  font-size: 2.25rem;
+  margin: 0.5rem 0 1.5rem 0;
+  font-weight: 700;
+  color: ${props => props.theme.text};
+  position: relative;
+  display: inline-block;
+  
+  &::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -8px;
+    height: 3px;
+    width: 40px;
+    background-color: ${props => props.theme.accent};
+    border-radius: 3px;
+  }
 `;
 
 export const Section = styled.section<SectionProps>`
-  background-color: ${props => (props.second ? "#262734" : "#333646")};
-  padding: 2.5rem 0;
+  background-color: ${props => (props.second ? props.theme.neutral : props.theme.body)};
+  padding: 3.5rem 0;
 `;
 
 export const Button = styled(Link)`
   text-decoration: none;
   margin: 1rem 0;
-  color: #ffc25b;
+  color: ${props => props.theme.accent};
   position: relative;
 
   &::after {

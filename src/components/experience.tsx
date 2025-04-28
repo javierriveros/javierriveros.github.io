@@ -10,7 +10,7 @@ import { Container, Section, SectionProps, Title } from "./styles";
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 const ExperienceStyles = styled(Section)<SectionProps>`
-  background-color: #262734;
+  background-color: ${props => props.theme.neutral};
 `;
 
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -19,20 +19,21 @@ const ExperienceStyles = styled(Section)<SectionProps>`
 
 export type Node = {
   node: {
-    id: string;
+    uid: string;
     role: string;
-    responsibilities: string;
+    responsibilities: string[];
     company: string;
     from: string;
     to: string;
     url: string;
+    technologies?: string;
   };
 };
 
 export default function Experience() {
   const data = useStaticQuery(graphql`
     {
-      allExperienceJson(sort: { fields: [uid], order: DESC }) {
+      allExperienceJson(sort: { fields: [uid], order: ASC }) {
         edges {
           node {
             uid
@@ -42,6 +43,7 @@ export default function Experience() {
             from
             to
             url
+            technologies
           }
         }
       }
@@ -52,7 +54,7 @@ export default function Experience() {
       <Container>
         <Title>Work experience</Title>
         {data.allExperienceJson.edges.map(({ node }: Node) => (
-          <ExperienceCard node={node} key={node.id} />
+          <ExperienceCard node={node} key={node.uid} />
         ))}
       </Container>
     </ExperienceStyles>

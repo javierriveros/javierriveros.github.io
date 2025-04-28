@@ -17,6 +17,7 @@ const HeroStyles = styled.section`
 
   @media screen and (min-width: 62em) {
     flex-direction: row;
+    padding: 0;
   }
 `;
 
@@ -40,18 +41,25 @@ const RightContent = styled.aside`
 `;
 
 const Title = styled.h1`
-  color: #fff;
+  color: ${props => props.theme.text};
   margin: 0;
-  font-size: 2.5rem;
+  font-size: 3rem;
+  font-weight: 700;
+  background: linear-gradient(to right, ${props => props.theme.text}, ${props => props.theme.accent});
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
 
   @media screen and (min-width: 62em) {
-    font-size: 2.5rem;
+    font-size: 3.5rem;
   }
 `;
 
 const Subtitle = styled.h2`
-  color: #fff;
+  color: ${props => props.theme.text};
   font-size: 1.5rem;
+  margin: 1rem 0;
 
   @media screen and (min-width: 62em) {
     font-size: 2rem;
@@ -59,12 +67,12 @@ const Subtitle = styled.h2`
 `;
 
 const Description = styled.p`
-  color: #fff;
-  line-height: 1.5;
+  color: ${props => props.theme.neutralDark};
+  line-height: 1.8;
   font-size: 1rem;
 
   @media screen and (min-width: 62em) {
-    font-size: 1.25rem;
+    font-size: 1.1rem;
   }
 `;
 
@@ -74,12 +82,12 @@ export default function Hero() {
       <HeroStyles>
         <LeftContent>
           <Title>Hi! I{"'"}m Javier Riveros.</Title>
-          <Subtitle>I{"'"}m a web developer from Colombia 🇨🇴</Subtitle>
+          <Subtitle>Software Engineer from Colombia 🇨🇴</Subtitle>
           <Description>
-            I{"'"}m currently working as a Software Developer at Torre Labs Inc, where our goal is to make work fulfilling for everyone on Earth.
+            I solve complex problems through technology. With 4+ years of experience, I{"'"}ve built systems that scale, led technical initiatives, and helped teams grow through mentorship.
             <br />
             <br />
-            I{"'"}m a passionate about technology, especially in the field of web development. I{"'"}m always looking for new challenges to learn and grow.
+            Always curious about new technologies and passionate about creating solutions that make a difference in people{"'"}s lives.
           </Description>
         </LeftContent>
         <RightContent>

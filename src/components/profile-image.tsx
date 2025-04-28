@@ -7,7 +7,7 @@ const ProfileImage: React.FunctionComponent<{}> = () => {
     query {
       placeholderImage: file(relativePath: { eq: "profile.png" }) {
         childImageSharp {
-          fluid(maxWidth: 300) {
+          fluid(maxWidth: 400) {
             ...GatsbyImageSharpFluid
           }
         }
@@ -18,7 +18,7 @@ const ProfileImage: React.FunctionComponent<{}> = () => {
   return (
     <Img
       fluid={data.placeholderImage.childImageSharp.fluid}
-      style={{ clipPath: "url(#svg-blob)", minWidth: "300px" }}
+      style={{ clipPath: "url(#svg-blob)", minWidth: "350px" }}
     />
   );
 };

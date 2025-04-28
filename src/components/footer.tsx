@@ -9,7 +9,7 @@ const FooterStyles = styled.footer`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0.5rem 1rem;
+  padding: 2rem 1rem;
   flex-direction: column;
 
   div {
@@ -24,10 +24,13 @@ const FooterStyles = styled.footer`
 
   p {
     text-align: center;
+    color: ${props => props.theme.neutralDark};
+    font-size: 0.9rem;
   }
 
   @media screen and (min-width: 62em) {
     flex-direction: row;
+    padding: 3rem 1rem;
   }
 
   @media screen and (min-width: 32em) {
@@ -42,27 +45,16 @@ const FooterStyles = styled.footer`
     }
   }
 `;
+
 const SocialLink = styled.a`
   text-decoration: none;
   margin: 0 1rem;
-  color: #ffc25b;
+  color: ${props => props.theme.accent};
   position: relative;
-
-  &::after {
-    content: "";
-    position: absolute;
-    left: 0;
-    right: 0;
-    bottom: -5px;
-    border-bottom: 1px;
-    height: 1px;
-    width: 100%;
-    background-color: currentColor;
-    transition: bottom 0.3s;
-  }
-
-  &:hover::after {
-    bottom: 0;
+  font-weight: 500;
+  
+  &:hover {
+    color: ${props => props.theme.accentLight};
   }
 `;
 
@@ -70,13 +62,6 @@ const Footer: React.FunctionComponent<{}> = () => {
   return (
     <FooterStyles>
       <div>
-        <SocialLink
-          href="https://twitter.com/JavierRiiveros"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Twitter
-        </SocialLink>
         <SocialLink
           href="https://github.com/javierriveros"
           target="_blank"
@@ -92,11 +77,11 @@ const Footer: React.FunctionComponent<{}> = () => {
           Gitlab
         </SocialLink>
         <SocialLink
-          href="https://torre.co/javierriveros"
+          href="https://torre.ai/javierriveros"
           target="_blank"
           rel="noopener noreferrer"
         >
-          Torre.co
+          Torre.ai
         </SocialLink>
         <SocialLink
           href="https://www.linkedin.com/in/javier-riveros/"

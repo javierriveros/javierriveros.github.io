@@ -1,9 +1,10 @@
 export type Item = {
   id: string;
   name: string;
-  score: string;
   url?: string;
   degree?: string;
+  provider?: string;
+  year?: string;
 };
 
 export type Node = {

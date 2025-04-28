@@ -31,7 +31,7 @@ export interface Node {
 export default function ProjectsSummary() {
   const data = useStaticQuery(graphql`
     {
-      allProjectsJson(sort: { fields: date, order: DESC }, limit: 2) {
+      allProjectsJson(sort: { fields: date_raw, order: DESC }, limit: 2) {
         edges {
           node {
             id
