@@ -4,7 +4,7 @@ import { PageProps } from "gatsby";
 import SEO from "../components/seo";
 import Layout from "../components/layout";
 
-const NotFoundPage: React.FunctionComponent<PageProps> = (props: PageProps) => (
+const NotFoundPage: React.FunctionComponent<PageProps> = () => (
   <Layout>
     <SEO title="404: Not found" />
     <h1>NOT FOUND</h1>

@@ -52,13 +52,13 @@ const SocialLink = styled.a`
   color: ${props => props.theme.accent};
   position: relative;
   font-weight: 500;
-  
+
   &:hover {
     color: ${props => props.theme.accentLight};
   }
 `;
 
-const Footer: React.FunctionComponent<{}> = () => {
+const Footer: React.FC = () => {
   return (
     <FooterStyles>
       <div>

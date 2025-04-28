@@ -1,7 +1,8 @@
 module.exports = {
   siteMetadata: {
     title: "Javier Riveros",
-    description: "Software Engineer from Colombia 🇨🇴. I solve complex problems through technology. With 4+ years of experience, I've built systems that scale, led technical initiatives, and helped teams grow through mentorship.",
+    description:
+      "Software Engineer from Colombia 🇨🇴. I solve complex problems through technology. With 4+ years of experience, I've built systems that scale, led technical initiatives, and helped teams grow through mentorship.",
     author: "@javierriveros",
     siteUrl: "https://javierriveros.github.io",
   },
@@ -53,12 +54,10 @@ module.exports = {
     {
       resolve: "gatsby-plugin-google-fonts",
       options: {
-        fonts: [
-          "National+Park:wght@200..800&display=swap"
-        ],
-        display: "swap"
-      }
+        fonts: ["National+Park:wght@200..800&display=swap"],
+        display: "swap",
+      },
     },
     "gatsby-plugin-sitemap",
   ],
-}
+};

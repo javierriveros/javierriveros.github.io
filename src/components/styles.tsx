@@ -22,7 +22,7 @@ export const Title = styled.h3`
   color: ${props => props.theme.text};
   position: relative;
   display: inline-block;
-  
+
   &::after {
     content: "";
     position: absolute;
@@ -36,7 +36,8 @@ export const Title = styled.h3`
 `;
 
 export const Section = styled.section<SectionProps>`
-  background-color: ${props => (props.second ? props.theme.neutral : props.theme.body)};
+  background-color: ${props =>
+    props.second ? props.theme.neutral : props.theme.body};
   padding: 3.5rem 0;
 `;
 
