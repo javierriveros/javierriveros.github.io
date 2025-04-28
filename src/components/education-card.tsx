@@ -64,7 +64,7 @@ export const Check = styled.div`
   color: ${props => props.theme.secondary};
   padding-right: 0.75rem;
   height: 100%;
-  
+
   svg {
     width: 22px;
     height: 22px;
@@ -143,11 +143,7 @@ const EducationItem: React.FunctionComponent<EducationItemProps> = ({
         )}
 
         {item.url && (
-          <StyledLink
-            href={item.url}
-            target="_blank"
-            rel="noreferrer noopener"
-          >
+          <StyledLink href={item.url} target="_blank" rel="noreferrer noopener">
             View more
           </StyledLink>
         )}

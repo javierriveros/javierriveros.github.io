@@ -13,7 +13,8 @@ export default function ProjectsPage() {
         meta={[
           {
             name: "keywords",
-            content: "software projects, web applications, saas, full stack development, scala, python, vue.js, react, typescript, javascript, django, ruby on rails, play framework, aws, mysql, postgresql, redis, rabbitmq, llm, langchain, ai, machine learning, nlp, web scraping, data analysis, metabase, system architecture, performance optimization, test driven development, continuous integration, devops, cloud computing, distributed systems, microservices, api development, database design, frontend development, backend development, mobile development",
+            content:
+              "software projects, web applications, saas, full stack development, scala, python, vue.js, react, typescript, javascript, django, ruby on rails, play framework, aws, mysql, postgresql, redis, rabbitmq, llm, langchain, ai, machine learning, nlp, web scraping, data analysis, metabase, system architecture, performance optimization, test driven development, continuous integration, devops, cloud computing, distributed systems, microservices, api development, database design, frontend development, backend development, mobile development",
           },
         ]}
       />

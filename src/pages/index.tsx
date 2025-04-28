@@ -16,7 +16,8 @@ export default function IndexPage() {
         meta={[
           {
             name: "keywords",
-            content: "software engineer, full stack developer, scala, python, vue.js, react, typescript, javascript, django, ruby on rails, play framework, aws, mysql, postgresql, redis, rabbitmq, llm, langchain, ai, machine learning, nlp, web development, backend development, frontend development, colombia, product engineer, technical lead, mentor, software architecture, system design, performance optimization, test driven development, continuous integration, devops",
+            content:
+              "software engineer, full stack developer, scala, python, vue.js, react, typescript, javascript, django, ruby on rails, play framework, aws, mysql, postgresql, redis, rabbitmq, llm, langchain, ai, machine learning, nlp, web development, backend development, frontend development, colombia, product engineer, technical lead, mentor, software architecture, system design, performance optimization, test driven development, continuous integration, devops",
           },
         ]}
       />

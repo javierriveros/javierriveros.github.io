@@ -45,7 +45,11 @@ const Title = styled.h1`
   margin: 0;
   font-size: 3rem;
   font-weight: 700;
-  background: linear-gradient(to right, ${props => props.theme.text}, ${props => props.theme.accent});
+  background: linear-gradient(
+    to right,
+    ${props => props.theme.text},
+    ${props => props.theme.accent}
+  );
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -84,10 +88,13 @@ export default function Hero() {
           <Title>Hi! I{"'"}m Javier Riveros.</Title>
           <Subtitle>Software Engineer from Colombia 🇨🇴</Subtitle>
           <Description>
-            I solve complex problems through technology. With 4+ years of experience, I{"'"}ve built systems that scale, led technical initiatives, and helped teams grow through mentorship.
+            I solve complex problems through technology. With 4+ years of
+            experience, I{"'"}ve built systems that scale, led technical
+            initiatives, and helped teams grow through mentorship.
             <br />
             <br />
-            Always curious about new technologies and passionate about creating solutions that make a difference in people{"'"}s lives.
+            Always curious about new technologies and passionate about creating
+            solutions that make a difference in people{"'"}s lives.
           </Description>
         </LeftContent>
         <RightContent>

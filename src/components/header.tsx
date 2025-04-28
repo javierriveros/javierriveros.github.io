@@ -11,7 +11,8 @@ const HeaderStyles = styled.header`
   justify-content: space-between;
   align-items: center;
   padding: 1.5rem 0;
-  background-color: ${props => `${props.theme.body}99`}; /* Semi-transparent background */
+  background-color: ${props =>
+    `${props.theme.body}99`}; /* Semi-transparent background */
   backdrop-filter: blur(8px);
   -webkit-backdrop-filter: blur(8px); /* For Safari support */
   border-bottom: 1px solid ${props => props.theme.neutral};
@@ -29,7 +30,7 @@ const HeaderStyles = styled.header`
       font-weight: 700;
       font-size: 1.5rem;
       transition: color 0.2s ease;
-      
+
       &:hover {
         color: ${props => props.theme.accentLight};
       }
@@ -93,7 +94,7 @@ const Header: React.FunctionComponent<HeaderProps> = ({
   siteTitle,
 }: HeaderProps) => {
   const { theme, toggleTheme } = React.useContext(ThemeContext);
-  
+
   return (
     <HeaderStyles>
       <HeaderContainer>
@@ -110,7 +111,6 @@ const Header: React.FunctionComponent<HeaderProps> = ({
         </nav>
       </HeaderContainer>
     </HeaderStyles>
-
   );
 };
 

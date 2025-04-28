@@ -13,12 +13,14 @@ const ProjectStyles = styled.article`
   padding: 1.75rem;
   border-radius: 0.5rem;
   margin-top: 1.5rem;
-  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05),
+    0 2px 4px -1px rgba(0, 0, 0, 0.03);
   transition: transform 0.2s ease, box-shadow 0.2s ease;
-  
+
   &:hover {
     transform: translateY(-2px);
-    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.08), 0 4px 6px -2px rgba(0, 0, 0, 0.04);
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.08),
+      0 4px 6px -2px rgba(0, 0, 0, 0.04);
   }
 `;
 
@@ -38,11 +40,11 @@ const ProjectTitleLink = styled.a`
   text-decoration: none;
   display: inline-flex;
   align-items: center;
-  
+
   &:hover {
     text-decoration: underline;
   }
-  
+
   svg {
     width: 1rem;
     height: 1rem;
@@ -92,9 +94,17 @@ const ProjectCard = ({ node }: Node) => {
   return (
     <ProjectStyles>
       {node.url ? (
-        <ProjectTitleLink href={node.url} target="_blank" rel="noopener noreferrer">
+        <ProjectTitleLink
+          href={node.url}
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           {node.name}
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 20 20"
+            fill="currentColor"
+          >
             <path d="M11 3a1 1 0 100 2h2.586l-6.293 6.293a1 1 0 101.414 1.414L15 6.414V9a1 1 0 102 0V4a1 1 0 00-1-1h-5z" />
             <path d="M5 5a2 2 0 00-2 2v8a2 2 0 002 2h8a2 2 0 002-2v-3a1 1 0 10-2 0v3H5V7h3a1 1 0 000-2H5z" />
           </svg>
