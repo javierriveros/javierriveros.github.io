@@ -41,5 +41,14 @@ module.exports = {
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,
     "gatsby-plugin-styled-components",
+    {
+      resolve: `gatsby-plugin-google-fonts`,
+      options: {
+        fonts: [
+          `National+Park:wght@200..800&display=swap`
+        ],
+        display: 'swap'
+      }
+    }
   ],
 }
