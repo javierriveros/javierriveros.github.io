@@ -146,7 +146,7 @@ const EducationItem: React.FunctionComponent<EducationItemProps> = ({
           <StyledLink
             href={item.url}
             target="_blank"
-            rel="noreferrer nooopener"
+            rel="noreferrer noopener"
           >
             View more
           </StyledLink>
