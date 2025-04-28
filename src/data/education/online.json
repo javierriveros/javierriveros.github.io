@@ -5,21 +5,31 @@
   "items": [
     {
       "id": "online-01",
-      "name": "Professional JavaScript course",
-      "url": "https://codigofacilito.com/cursos/javascript-profesional",
-      "score": "9"
+      "name": "Advanced React.js Course",
+      "url": "https://platzi.com/p/walterriveros/curso/11223-react-avanzado/diploma/detalle/",
+      "year": "2025",
+      "provider": "Platzi"
     },
     {
       "id": "online-02",
-      "name": "Professional Java course",
-      "url": "https://codigofacilito.com/cursos/java-profesional",
-      "score": "9"
+      "name": "Chatbots development with OpenAI",
+      "url": "https://platzi.com/p/walterriveros/curso/8022-openai-api-23/diploma/detalle/",
+      "year": "2024",
+      "provider": "Platzi"
     },
     {
       "id": "online-03",
-      "name": "Create a personal site with Gatsby",
-      "url": "https://codigofacilito.com/cursos/sitio-persional-gatsby",
-      "score": "9"
+      "name": "Google AI Essentials",
+      "url": "https://www.coursera.org/account/accomplishments/records/9MYTPKP5Z8W9",
+      "year": "2025",
+      "provider": "Coursera"
+    },
+    {
+      "id": "online-04",
+      "name": "Developing Interpersonal Skills",
+      "url": "https://www.coursera.org/account/accomplishments/records/VEVKMFWWT6Y9",
+      "year": "2024",
+      "provider": "IBM"
     }
   ]
 }

@@ -18,13 +18,14 @@ export interface Node {
     stack: string;
     date: string;
     goals: string[];
+    url?: string;
   };
 }
 
 export default function Projects() {
   const data = useStaticQuery(graphql`
     {
-      allProjectsJson(sort: { fields: date, order: DESC }) {
+      allProjectsJson(sort: { fields: date_raw, order: DESC }) {
         edges {
           node {
             id
@@ -34,6 +35,7 @@ export default function Projects() {
             client
             goals
             date
+            url
           }
         }
       }

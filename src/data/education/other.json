@@ -1,17 +1,17 @@
 {
   "slug": "others",
-  "description": "Workshops, diplomas and conferences in which I've participated",
-  "title": "Other",
+  "description": "Tech skills, languages, and interests",
+  "title": "Additional Information",
   "items": [
     {
-      "id": "other-01",
-      "name": "CTA Unillanos",
-      "degree": "Open Technologies Conference at the University of Los Llanos."
+      "id": "other-02",
+      "name": "Languages",
+      "degree": "Fluent in English and Spanish"
     },
     {
-      "id": "other-02",
-      "name": "Oracle Code Bogotá",
-      "degree": "Oracle conference to learn about modern technologies."
+      "id": "other-03",
+      "name": "Interests",
+      "degree": "Running, Cycling, Photography, Side projects"
     }
   ]
 }

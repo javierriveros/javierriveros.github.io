@@ -56,18 +56,19 @@ const EducationItemStyles = styled.div`
 const ItemTitle = styled.h4`
   display: inline-block;
   margin: 0 0 0.5rem;
+  font-size: 1.1rem;
 `;
 
 export const Check = styled.div`
   display: flex;
-  color: #17bdca;
-  /* width: 20px; */
-  padding-right: 0.5rem;
+  color: ${props => props.theme.secondary};
+  padding-right: 0.75rem;
   height: 100%;
-
+  
   svg {
-    width: 20px;
-    height: 20px;
+    width: 22px;
+    height: 22px;
+    filter: drop-shadow(0 0 2px rgba(45, 212, 191, 0.2));
   }
 `;
 
@@ -78,9 +79,34 @@ const Content = styled.div`
 `;
 
 const StyledLink = styled.a`
-  color: #ffaf28;
+  color: ${props => props.theme.accent};
   text-decoration: none;
 `;
+
+const MetaInfo = styled.div`
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  margin-bottom: 0.5rem;
+`;
+
+const Provider = styled.span`
+  color: ${props => props.theme.neutralDark};
+  font-size: 0.9rem;
+`;
+
+const Year = styled.span`
+  color: ${props => props.theme.neutralDark};
+  font-size: 0.9rem;
+`;
+
+const InstitutionName = styled.span`
+  margin-bottom: 0.5rem;
+  display: block;
+  word-wrap: break-word;
+`;
+
+const DegreeInfo = styled.div``;
 
 const EducationItem: React.FunctionComponent<EducationItemProps> = ({
   item,
@@ -97,9 +123,25 @@ const EducationItem: React.FunctionComponent<EducationItemProps> = ({
         </svg>
       </Check>
       <Content>
-        <ItemTitle>{item.name}</ItemTitle>
+        <DegreeInfo>
+          {item.degree ? (
+            <>
+              <ItemTitle>{item.degree}</ItemTitle>
+              <InstitutionName>{item.name}</InstitutionName>
+            </>
+          ) : (
+            <ItemTitle>{item.name}</ItemTitle>
+          )}
+        </DegreeInfo>
 
-        {item.degree && <span>{item.degree}</span>}
+        {(item.provider || item.year) && (
+          <MetaInfo>
+            {item.provider && <Provider>{item.provider}</Provider>}
+            {item.provider && item.year && <Year>{item.year}</Year>}
+            {!item.provider && item.year && <Provider>{item.year}</Provider>}
+          </MetaInfo>
+        )}
+
         {item.url && (
           <StyledLink
             href={item.url}

@@ -5,15 +5,17 @@
   "items": [
     {
       "id": "academic-01",
-      "name": "Los Llanos University",
-      "degree": "Systems engineering",
-      "score": "3.6"
+      "name": "Universidad de los Llanos",
+      "degree": "Systems Engineer",
+      "year": "2015 - 2022",
+      "provider": "Villavicencio, Meta, Colombia"
     },
     {
       "id": "academic-02",
-      "name": "SENA",
-      "degree": "Agricultural Production Technician",
-      "score": "4.5"
+      "name": "Talento Tech Bogotá - MinTIC - Certiprof",
+      "degree": "Artificial Intelligence Expert Certificate - CAIEC®",
+      "year": "2025",
+      "provider": "Bogotá, Colombia"
     }
   ]
 }
