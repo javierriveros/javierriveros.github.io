@@ -1,54 +1,64 @@
 module.exports = {
   siteMetadata: {
-    title: `Javier Riveros`,
-    description: `Software Engineer from Colombia 🇨🇴. I solve complex problems through technology. With 4+ years of experience, I've built systems that scale, led technical initiatives, and helped teams grow through mentorship.`,
-    author: `@javierriveros`,
+    title: "Javier Riveros",
+    description: "Software Engineer from Colombia 🇨🇴. I solve complex problems through technology. With 4+ years of experience, I've built systems that scale, led technical initiatives, and helped teams grow through mentorship.",
+    author: "@javierriveros",
+    siteUrl: "https://javierriveros.github.io",
   },
   plugins: [
-    `gatsby-plugin-react-helmet`,
-    `gatsby-plugin-typescript`,
-    `gatsby-transformer-json`,
+    "gatsby-plugin-react-helmet",
+    "gatsby-plugin-typescript",
+    "gatsby-transformer-json",
     {
-      resolve: `gatsby-source-filesystem`,
+      resolve: "gatsby-source-filesystem",
       options: {
-        name: `images`,
+        name: "images",
         path: `${__dirname}/src/images`,
       },
     },
     {
-      resolve: `gatsby-source-filesystem`,
+      resolve: "gatsby-source-filesystem",
       options: {
-        name: `data`,
+        name: "data",
         path: `${__dirname}/src/data`,
       },
     },
-    `gatsby-transformer-sharp`,
-    `gatsby-plugin-sharp`,
+    "gatsby-transformer-sharp",
+    "gatsby-plugin-sharp",
     {
-      resolve: `gatsby-plugin-manifest`,
-
-      /* eslint-disable */
+      resolve: "gatsby-plugin-manifest",
       options: {
-        name: `gatsby-starter-default`,
-        short_name: `starter`,
-        start_url: `/`,
-        background_color: `#663399`,
-        theme_color: `#663399`,
-        display: `minimal-ui`,
-        icon: `src/images/logo.png`, // This path is relative to the root of the site.
+        name: "Javier Riveros - Software Engineer",
+        short_name: "Javier Riveros",
+        start_url: "/",
+        background_color: "#0f172a",
+        theme_color: "#0f172a",
+        display: "standalone",
+        icon: "src/images/logo.png",
+        icons: [
+          {
+            src: "src/images/logo.png",
+            sizes: "192x192",
+            type: "image/png",
+          },
+          {
+            src: "src/images/logo.png",
+            sizes: "512x512",
+            type: "image/png",
+          },
+        ],
       },
-    }, // this (optional) plugin enables Progressive Web App + Offline functionality
-    // To learn more, visit: https://gatsby.dev/offline
-    // `gatsby-plugin-offline`,
+    },
     "gatsby-plugin-styled-components",
     {
-      resolve: `gatsby-plugin-google-fonts`,
+      resolve: "gatsby-plugin-google-fonts",
       options: {
         fonts: [
-          `National+Park:wght@200..800&display=swap`
+          "National+Park:wght@200..800&display=swap"
         ],
-        display: 'swap'
+        display: "swap"
       }
-    }
+    },
+    "gatsby-plugin-sitemap",
   ],
 }

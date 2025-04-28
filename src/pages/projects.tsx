@@ -8,11 +8,12 @@ export default function ProjectsPage() {
   return (
     <Layout>
       <SEO
-        title="Home"
+        title="Projects | Javier Riveros"
+        description="Explore my technical projects showcasing expertise in full-stack development, AI integration, and system architecture. From SaaS platforms to AI-powered solutions, see how I solve complex problems through technology."
         meta={[
           {
             name: "keywords",
-            content: "portfolio, gatsby, react, javascript",
+            content: "software projects, web applications, saas, full stack development, scala, python, vue.js, react, typescript, javascript, django, ruby on rails, play framework, aws, mysql, postgresql, redis, rabbitmq, llm, langchain, ai, machine learning, nlp, web scraping, data analysis, metabase, system architecture, performance optimization, test driven development, continuous integration, devops, cloud computing, distributed systems, microservices, api development, database design, frontend development, backend development, mobile development",
           },
         ]}
       />
