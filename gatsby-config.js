@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
     title: `Javier Riveros`,
-    description: `I${"'"}m a web developer from Colombia 🇨🇴. I${"'"}m currently working as an intern at Enciso Systems company. I ${"'"}ve been building modern web applications using Ruby on Rails and React for about +2 years.`,
+    description: `Software Engineer from Colombia 🇨🇴. I solve complex problems through technology. With 4+ years of experience, I've built systems that scale, led technical initiatives, and helped teams grow through mentorship.`,
     author: `@javierriveros`,
   },
   plugins: [
