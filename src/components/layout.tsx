@@ -64,19 +64,7 @@ type LayoutProps = {
 };
 
 const Layout: FunctionComponent<LayoutProps> = ({ children }: LayoutProps) => {
-  const [theme, setTheme] = useState<ThemeType>(() => {
-    if (typeof window === "undefined") return darkTheme;
-
-    const savedTheme = localStorage.getItem("theme");
-    if (savedTheme) {
-      return savedTheme === "dark" ? darkTheme : lightTheme;
-    }
-
-    const prefersDarkMode = window.matchMedia(
-      "(prefers-color-scheme: dark)"
-    ).matches;
-    return prefersDarkMode ? darkTheme : lightTheme;
-  });
+  const [theme, setTheme] = useState<ThemeType>(darkTheme);
 
   const toggleTheme = () => {
     setTheme(currentTheme =>
@@ -90,6 +78,19 @@ const Layout: FunctionComponent<LayoutProps> = ({ children }: LayoutProps) => {
   };
 
   useEffect(() => {
+    const savedTheme =
+      typeof window !== "undefined" ? localStorage.getItem("theme") : null;
+
+    if (savedTheme) {
+      setTheme(savedTheme === "dark" ? darkTheme : lightTheme);
+    } else {
+      const prefersDarkMode =
+        window.matchMedia &&
+        window.matchMedia("(prefers-color-scheme: dark)").matches;
+
+      setTheme(prefersDarkMode ? darkTheme : lightTheme);
+    }
+
     const mediaQuery = window.matchMedia("(prefers-color-scheme: dark)");
     const handleChange = (e: MediaQueryListEvent) => {
       if (!localStorage.getItem("theme")) {
