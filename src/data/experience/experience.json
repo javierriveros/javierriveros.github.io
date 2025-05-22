@@ -11,7 +11,7 @@
     "from": "Feb 2024",
     "to": "Present",
     "url": "https://torre.ai",
-    "technologies": "Scala • Play! Framework • LangChain • LLMs • RabbitMQ • Vue.js • Nuxt.js • MySQL • Metabase • AWS • Jest • TypeScript"
+    "technologies": "Scala • Play! Framework • LangChain • LLMs • Slick • RabbitMQ • Vue.js • Nuxt.js • MySQL • Metabase • AWS • Jest • TypeScript"
   },
   {
     "uid": "experience-02",
@@ -24,7 +24,7 @@
     "from": "Jun 2021",
     "to": "Feb 2024",
     "url": "https://torre.ai",
-    "technologies": "Scala • Play! Framework • Vue.js • Nuxt.js • RabbitMQ • MySQL • Metabase • AWS • Jest • TypeScript • Python • Django • Flutter"
+    "technologies": "Scala • Play! Framework • Slick • Vue.js • Nuxt.js • RabbitMQ • MySQL • Metabase • AWS • Jest • TypeScript • Python • Django • Flutter"
   },
   {
     "uid": "experience-03",
