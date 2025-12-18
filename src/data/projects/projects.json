@@ -1,6 +1,21 @@
 [
   {
     "id": "p-00",
+    "name": "Aural - AI Voice Assistant",
+    "description": "Native macOS app for seamless voice-to-text transcription using local and cloud AI models.",
+    "stack": "SwiftUI, SwiftData, AVFoundation, OpenAI Whisper",
+    "client": "Personal Project",
+    "goals": [
+      "Built a native macOS menu bar app using SwiftUI that captures system-wide audio for transcription.",
+      "Implemented local speech-to-text processing using Whisper and Parakeet models for offline privacy.",
+      "Created a floating widget and global hotkey system to allow instant dictation into any application."
+    ],
+    "date_raw": "2025-12-18",
+    "date": "December 2025 - Present",
+    "url": "https://github.com/javierriveros/Aural"
+  },
+  {
+    "id": "p-01",
     "name": "News data analysis",
     "description": "Analysis of news data to extract insights and apply different NLP techniques.",
     "stack": "Python, Redis, Scrapy, Metabase, PostgreSQL",
@@ -14,7 +29,7 @@
     "date": "April 2025 - Present"
   },
   {
-    "id": "p-01",
+    "id": "p-02",
     "name": "Cives.co - Campaign Management SaaS",
     "description": "Scalable SaaS platform to power large-scale political and marketing campaigns",
     "stack": "Django, Bootstrap, Vue.js, Redis, Celery, PostgreSQL",
@@ -29,7 +44,7 @@
     "url": "https://cives.co"
   },
   {
-    "id": "p-02",
+    "id": "p-03",
     "name": "Personal Portfolio",
     "description": "Personal site developed with Gatsby.js to showcase projects and experience.",
     "stack": "React.js, Gatsby.js, styled-components, GraphQL",
@@ -44,7 +59,7 @@
     "url": "https://javierriveros.github.io"
   },
   {
-    "id": "p-03",
+    "id": "p-04",
     "name": "Musell.co - Virtual Training Platform",
     "description": "Comprehensive virtual training platform with online video courses targeting marketing professionals",
     "stack": "Ruby on Rails, PostgreSQL, Bootstrap, jQuery, Heroku",
@@ -57,7 +72,7 @@
     "date": "January 2020"
   },
   {
-    "id": "p-04",
+    "id": "p-05",
     "name": "Medical RK",
     "description": "Full-stack web app for making tests in hospitals and health institutions",
     "stack": "Next.js, Ruby on Rails, JWT, TailwindCSS",
@@ -71,7 +86,7 @@
     "date": "May 2020"
   },
   {
-    "id": "p-05",
+    "id": "p-06",
     "name": "Payment tax agreement report",
     "description": "Reports in SQL and Laravel for showing data about tax reports.",
     "stack": "PHP, Laravel, SQL",
@@ -85,7 +100,7 @@
     "date": "April 2020"
   },
   {
-    "id": "p-06",
+    "id": "p-07",
     "name": "Geobike",
     "description": "Online shop for sport products and cycling events manager.",
     "stack": "Ruby on Rails, PostgreSQL, Heroku",
@@ -99,7 +114,7 @@
     "date": "March 2019"
   },
   {
-    "id": "p-07",
+    "id": "p-08",
     "name": "Dental clinic information system",
     "description": "Web platform for managing radiographies and patients information between multiples dental clinics.",
     "stack": "Ruby on Rails, PostgreSQL, Heroku",
